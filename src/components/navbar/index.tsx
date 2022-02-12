@@ -1,19 +1,30 @@
-import { Nav, NavLink } from './navbarElements';
+import { navBar, navHamburger, sideNavBar, NavbarComponent, SideNavBarComponent } from './navbarSx';
+import { Turn as Hamburger } from 'hamburger-react'
+import { Box } from '@mui/material';
+import { useState } from 'react';
 
-const links = ['Events', '|', 'Contact', '|', 'Log In', '|', 'Admin']
+
 
 const Navbar = () => {
+  const [sideNavbarActive, setSideNavbarActive] = useState<boolean>(false) 
+
+  const handleClick = () => {
+    setSideNavbarActive(prevSideNavbarActive => !prevSideNavbarActive)
+  }
+
   return (
     <>
-    <Nav>
-      {links.map((link) => {
-        return (
-          <NavLink>
-            {link}
-          </NavLink>
-        )
-      })}
-    </Nav>
+    <Box sx={{...navBar}}>
+      {NavbarComponent()}
+    </Box>
+
+    <Box sx={{...navHamburger}}>
+      <Hamburger color='white' rounded onToggle={handleClick}/>
+    </Box>
+
+    <Box sx={{...sideNavBar}}>
+      {SideNavBarComponent(sideNavbarActive)}
+    </Box>
     </>
   );
 }

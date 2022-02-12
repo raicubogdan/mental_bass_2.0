@@ -1,12 +1,10 @@
-import { styled } from '@material-ui/core';
+import { SxProps } from '@mui/material'
+import background from './images/background.png'
 
-export const AppContainer = styled('div')(() => ({
-  width: '100%',
-  height: '100%'
-}))
-
-export const BackgroundImage = styled('img')(() => ({
-  position: 'absolute',
-  height: 'inherit',
-  width: 'inherit',
-}))
+export const appProps: SxProps = {
+  minHeight: '100%',
+  backgroundImage: `url("${background}")`,
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+}

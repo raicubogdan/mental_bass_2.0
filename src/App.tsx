@@ -1,15 +1,14 @@
-import background from './images/background.png';
-import Navbar from './components/navbar';
-import { AppContainer, BackgroundImage } from './AppElements'
+import Nav from './components/navbar';
 import Footer from './components/footer'
+import { Box } from '@mui/material';
+import { appProps } from './AppElements';
 
 function App() {
   return (
-    <AppContainer>
-      <BackgroundImage src={background} alt="background"/>
-      <Navbar />
-      <Footer />
-    </AppContainer>
+    <Box sx={appProps} >
+      <Nav/>
+      {/* <Footer />  */}
+    </Box>
   );
 }
 
