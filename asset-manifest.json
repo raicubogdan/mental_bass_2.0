@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mental-bass-2.0/static/css/main.dfb69b91.css",
-    "main.js": "/mental-bass-2.0/static/js/main.ad6a71ac.js",
+    "main.js": "/mental-bass-2.0/static/js/main.5a40823a.js",
     "static/media/background3.png": "/mental-bass-2.0/static/media/background3.e7c34840e2381a7f7e66.png",
     "static/media/logo.png": "/mental-bass-2.0/static/media/logo.f6bf4e7c41fa669f2ff2.png",
     "static/media/circle.png": "/mental-bass-2.0/static/media/circle.40f49336bc4126422b68.png",
@@ -10,10 +10,10 @@
     "static/media/Cynatar.otf": "/mental-bass-2.0/static/media/Cynatar.d71ba268d68a0ebe452c.otf",
     "index.html": "/mental-bass-2.0/index.html",
     "main.dfb69b91.css.map": "/mental-bass-2.0/static/css/main.dfb69b91.css.map",
-    "main.ad6a71ac.js.map": "/mental-bass-2.0/static/js/main.ad6a71ac.js.map"
+    "main.5a40823a.js.map": "/mental-bass-2.0/static/js/main.5a40823a.js.map"
   },
   "entrypoints": [
     "static/css/main.dfb69b91.css",
-    "static/js/main.ad6a71ac.js"
+    "static/js/main.5a40823a.js"
   ]
 }
