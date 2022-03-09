@@ -1,3 +1,16 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+}
+
 @font-face {
   font-family: 'Cynatar';
   src: local('Cynatar'), url('./fonts/Cynatar.otf') format('truetype');
@@ -6,4 +19,26 @@
 @font-face {
   font-family: 'LEDLIGHT';
   src: local('LEDLIGHT'), url('./fonts/LEDLIGHT.otf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#root{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }

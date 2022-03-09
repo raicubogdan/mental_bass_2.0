@@ -1,13 +1,22 @@
-import { FooterContainer, FooterText } from './footerElements'
+import { Box } from '@mui/material'
+import { footerContainer, logoContainer, logo, socialMediaContainer, SocialMedia } from './sx'
+import logoImg from 'images/logo.png'
+import { Instagram, Facebook, YouTube } from '@mui/icons-material';
 
+
+export const socialMedia = [
+  Facebook, Instagram, YouTube
+]
 const Footer = () => {
   return(
-    <FooterContainer>
-      <FooterText>
-        Mental Bass 2022
-      </FooterText>
-  </FooterContainer>
-  )
+    <Box sx={footerContainer}>
+      <Box sx={logoContainer}>
+        <Box component='img' sx={logo} src={logoImg} />
+      </Box>
+      <SocialMedia />
+    </Box>
+
+  ) 
 }
 
 export default Footer
