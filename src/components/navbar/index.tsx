@@ -1,19 +1,18 @@
-import { Nav, NavLink } from './navbarElements';
-
-const links = ['Events', '|', 'Contact', '|', 'Log In', '|', 'Admin']
+import { TopNavbar, SideNavbar, Hamburger } from './components';
+import { useState } from 'react';
 
 const Navbar = () => {
+  const [sideNavbarPosition, setSideNavbarPosition] = useState<string>("-100%") 
+
+  const handleClick = () => {
+    setSideNavbarPosition(prevSideNavbarPosition => prevSideNavbarPosition === '-100%' ? '0%' : '-100%')
+  }
+
   return (
     <>
-    <Nav>
-      {links.map((link) => {
-        return (
-          <NavLink>
-            {link}
-          </NavLink>
-        )
-      })}
-    </Nav>
+      <TopNavbar />
+      <Hamburger handleClick={handleClick}/>
+      <SideNavbar sideNavbarPosition={sideNavbarPosition}/>
     </>
   );
 }
