@@ -2,7 +2,7 @@ import { Box } from '@mui/system'
 import { motion } from 'framer-motion'
 import { containerVariants } from 'sx'
 import { home } from './sx'
-import logo from 'images/logo.png' 
+import logo from 'images/logo.png'
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
 
       <video style={{position: 'absolute'}} loop autoPlay muted>
         <source
-          src={'https://firebasestorage.googleapis.com/v0/b/mental-bass-2-0.appspot.com/o/video_background.mp4?alt=media&token=514e020f-7fd1-4ca3-8a4c-5fba9fc588b5'}
+          src={require('images/video_background.mp4')}
           type="video/mp4"
         />
       </video>
