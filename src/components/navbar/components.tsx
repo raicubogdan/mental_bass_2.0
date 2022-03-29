@@ -49,7 +49,7 @@ export const SideNavbar = ({sideNavbarPosition}: any) => {
       <Grid container>
         {links.map(link => {
           return (
-          <Grid item xs={6}>
+          <Grid key={link.id} item xs={6}>
             <Link to={link.to} style={{textDecoration: 'none'}}>
               <Box sx={navLink}>{link.text}</Box>
             </Link>

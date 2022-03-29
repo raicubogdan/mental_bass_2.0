@@ -4,21 +4,20 @@ import { Box } from '@mui/system'
 import backgroundImg from 'images/circle.png'
 
 export const socialMedia = [
-  {link: 'https://www.facebook.com/MBSoundSystem', Icon: Facebook},
-  {link: 'https://www.instagram.com/mentalbasssoundsystem/', Icon: Instagram},
-  {link: 'https://www.youtube.com/channel/UCgD-6b8Y1UoH1Hn4TnpvhBg', Icon: YouTube},
+  {id: '4', link: 'https://www.facebook.com/MBSoundSystem', Icon: Facebook},
+  {id: '5', link: 'https://www.instagram.com/mentalbasssoundsystem/', Icon: Instagram},
+  {id: '6', link: 'https://www.youtube.com/channel/UCgD-6b8Y1UoH1Hn4TnpvhBg', Icon: YouTube},
 ]
 
 export const contact: SxProps = {
   mt: {lg: '4vh', md:'2rem', sm:'0rem', xs:'15vh'},
-  position: 'absolute',
   height: '100%',
   width: '100%',
   backgroundColor: 'black',
 }
 
 export const contactContainer: SxProps = {
-  mt: {lg: '15vh', md:'2rem', sm:'1rem'},
+  mt: {lg: '10rem', md:'2rem', sm:'1rem'},
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -64,7 +63,7 @@ export const SocialMedia = () => {
     <Box sx={socialMediaContainer}>
       {socialMedia.map(link => {
         return (
-          <Box component={'a'} target="_blank" href={link.link} style={{color: 'white'}}>
+          <Box key={link.id} component={'a'} target="_blank" href={link.link} style={{color: 'white'}}>
             <link.Icon sx={{fontSize:{lg: '6vh', md: '10vh', sm: '8vh', xs:'6vh'}}}/>
           </Box>
         )

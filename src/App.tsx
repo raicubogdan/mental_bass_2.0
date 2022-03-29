@@ -12,9 +12,9 @@ import EventDetails from 'components/eventDetails';
 function App() {
   return (
     <Box sx={app}>
-        <BrowserRouter>
+        <BrowserRouter basename='/mental_bass_2.0'>
           <Nav/>
-            <AnimatedRoutes>
+            <AnimatedRoutes> 
               <Route path="/" element={<Home />} />
               <Route path="/events" element={<Events />}/>
               <Route path="/events/:id" element={<EventDetails />}/>

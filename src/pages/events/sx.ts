@@ -1,28 +1,21 @@
 import { SxProps } from '@mui/material';
 import backgroundImg from 'images/ram-skull-no-background.png'
 
-export const events: SxProps = {
-  position: 'absolute',
-  mt: {lg: '10vh', md: '3rem', xs:'1rem'},
-  height: '100%',
-  width: '100%',
-  backgroundColor: 'black',
-}
-
 export const eventsContainer: SxProps = {
+  mt: {lg: '6rem', sm: '5rem'},
+  height: '80%',
   display: 'flex',
-  flexDirection: {lg: 'column', sm:'row', xs:'column'},
+  flexDirection: {lg: 'row', sm:'row', xs:'column'},
   alignItems: {lg: 'center', sm:'flex-start', xs:'center'},
-  height: {lg: '85%', xs:'90%'},
-  width: {lg: '60%', xs:'100%'},
-  m: {lg: '5vh 0 0 0'},
+  justifyContent: 'space-around'
 }
 
 export const eventsList: SxProps = {
-  height: 'inherit',
-  width: 'inherit',
+  mt: {lg: '4rem', sm: 0},
+  mb:'4rem',
+  height: '90%',
+  width: {lg:'40%', xs: '100%'},
   direction: 'rtl',
-  position: 'relative',
   overflowY: 'scroll',
   overflowX: 'hidden',
   display: 'flex',
@@ -43,11 +36,8 @@ export const eventItem: SxProps = {
 
 export const background: SxProps = {
   display: {lg: 'block', xs:'none'},
-  position: 'absolute',
   height: '70vh',
   width: '100vh',
-  top: '10vh',
-  right: '0',
   backgroundImage: `url("${backgroundImg}")`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'contain',

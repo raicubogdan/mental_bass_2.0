@@ -1,17 +1,18 @@
 import { SxProps } from '@mui/material'
 
 export const topNavBar: SxProps = {
-  zIndex: '1',
-  position: 'absolute',
+  zIndex:'1',
   width: '100%',
+  height: '30px',
+  position:'absolute',
   display: {lg: 'flex', xs:'none'},
   flexDirection:'row',
   justifyContent: 'space-around',
-  backgroundColor: 'rgba(0, 0, 0, 0)',
+  background: 'rgba(0, 0, 0, 0)'
 }
 
 export const navHamburger: SxProps = {
-  zIndex: '1',
+  zIndex: 1,
   position: 'fixed',
   display: {lg: 'none', md:'block'},
   right: '5%',

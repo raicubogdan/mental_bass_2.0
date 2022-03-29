@@ -1,13 +1,7 @@
 import { SxProps } from '@mui/material';
 
-export const eventDetails: SxProps = {
-  height: '100%',
-  width: '100%',
-  background: 'black'
-}
-
 export const eventDetailsContainer: SxProps = {
-  mt: {lg: '16rem', sm:'6rem', xs:'8rem'},
+  mt: {lg: '10rem', sm:'6rem', xs:'8rem'},
   width:'100%',
   display: 'flex',
   flexDirection: {lg: 'row', md:'row', sm:'row', xs:'column'},
@@ -22,12 +16,6 @@ export const eventDetailsData: SxProps = {
   fontFamily: 'orbitron',
   fontSize: {lg: '5vh', md: '4vh', sm:'4vw', xs: '3vh'},
   color: 'white',
-}
-
-export const eventCoverContainer: SxProps = {
-  mt: {md: '2rem', sm:'2rem',  xs:'2rem'},
-  display:'flex',
-  alignItems: 'center'
 }
 
 export const eventCover: SxProps = {
