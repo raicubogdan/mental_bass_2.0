@@ -17,7 +17,7 @@ const Home = () => {
 
       <video style={{position: 'absolute'}} loop autoPlay muted>
         <source
-          src={require('images/video_background.mp4')}
+          src={'https://firebasestorage.googleapis.com/v0/b/mental-bass-2-0.appspot.com/o/video_background.mp4?alt=media&token=514e020f-7fd1-4ca3-8a4c-5fba9fc588b5'}
           type="video/mp4"
         />
       </video>
