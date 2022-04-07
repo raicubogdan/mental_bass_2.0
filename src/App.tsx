@@ -12,7 +12,7 @@ import EventDetails from 'components/eventDetails';
 function App() {
   return (
     <Box sx={app}>
-        <BrowserRouter basename='/mental_bass_2.0'>
+        <BrowserRouter>
           <Nav/>
             <AnimatedRoutes> 
               <Route path="/" element={<Home />} />

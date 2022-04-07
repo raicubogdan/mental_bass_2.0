@@ -38,6 +38,7 @@ const Events = () => {
         snapshot.docs.forEach(doc => {
           results.push({id: doc.id, ...doc.data()})
         })
+        
         setEventsList(results)
       })
   }, [])

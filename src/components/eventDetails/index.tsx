@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { containerVariants } from 'sx'
 import getDateFromTimestamp from 'utils/utils'
-import { eventCover, eventDetailsContainer, eventDetailsData, eventDetailsItem } from './sx'
+import { eventDetailsContainer, eventDetailsData, eventDetailsItem, eventVideo } from './sx'
 
 const EventDetails = () => {
   const { id } = useParams()
@@ -45,12 +45,20 @@ const EventDetails = () => {
           <Box sx={eventDetailsItem}>{getDateFromTimestamp(event.date)}</Box>
           {console.log(event.coordinates)}
           <Box sx={eventDetailsItem}>
-            <p>{event.coordinates.latitude} </p>
-            <p>{event.coordinates.longitude}</p>
+            <p>{event.coordinates.latitude}°</p>
+            <p>{event.coordinates.longitude}°</p>
           </Box>
+          <Box sx={eventDetailsItem}>{event.details}</Box>
+
         </Box>
       }
-      <Box sx={eventCover}/>
+
+      <Box component={'video'} sx={eventVideo} autoPlay loop muted>
+        <source
+          src={'https://firebasestorage.googleapis.com/v0/b/mental-bass-2-0.appspot.com/o/event_video.mp4?alt=media&token=14861f24-7e50-4350-9fdd-e7b3a6cc8638'}
+          type="video/mp4"
+        />
+      </Box>
 
     </Box>
   )

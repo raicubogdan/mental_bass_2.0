@@ -1,8 +1,7 @@
 import { Box } from '@mui/system'
 import { motion } from 'framer-motion'
 import { containerVariants } from 'sx'
-import { home } from './sx'
-import logo from 'images/logo.png'
+import { home, logoSx, video } from './sx'
 
 const Home = () => {
   return (
@@ -13,14 +12,14 @@ const Home = () => {
       animate='visible'
       exit='hidden'>
 
-      <Box style={{ zIndex:'1', width: '29rem', height: '15rem'}} component={'img'} src={logo}/>
+      {/* <Box sx={logoSx} component={'img'} src={logo}/> */}
 
-      <video style={{position: 'absolute'}} loop autoPlay muted>
+      <Box component={'video'} sx={video} autoPlay muted>
         <source
-          src={require('images/video_background.mp4')}
+          src={'https://firebasestorage.googleapis.com/v0/b/mental-bass-2-0.appspot.com/o/video_background2.mp4?alt=media&token=177bd1fb-0799-4a2e-a926-715452989360'}
           type="video/mp4"
         />
-      </video>
+      </Box>
     </Box>
     
   )
