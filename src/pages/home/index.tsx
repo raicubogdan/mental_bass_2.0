@@ -1,28 +1,18 @@
-import { Box } from '@mui/system'
-import { motion } from 'framer-motion'
-import { containerVariants } from 'sx'
-import { home, logoSx, video } from './sx'
+// import { Box } from '@mui/system';
+import { motion } from 'framer-motion';
+import { containerVariants } from '~/sx';
 
 const Home = () => {
   return (
-    <Box sx={home}
-      component={motion.div}
+    <motion.div
+      className="w-1920 h-1080 bg-white"
       variants={containerVariants}
-      initial='hidden'
-      animate='visible'
-      exit='hidden'>
+      initial="hidden"
+      animate="visible"
+      exit="hidden">
+      {/* <img className="z-1 w-[29rem] h-[15rem] lg:block none" src={logo} /> */}
+    </motion.div>
+  );
+};
 
-      {/* <Box sx={logoSx} component={'img'} src={logo}/> */}
-
-      <Box component={'video'} sx={video} autoPlay muted>
-        <source
-          src={'https://firebasestorage.googleapis.com/v0/b/mental-bass-2-0.appspot.com/o/video_background2.mp4?alt=media&token=177bd1fb-0799-4a2e-a926-715452989360'}
-          type="video/mp4"
-        />
-      </Box>
-    </Box>
-    
-  )
-}
-
-export default Home
+export default Home;
