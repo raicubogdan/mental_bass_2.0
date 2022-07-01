@@ -1,7 +1,7 @@
 import { Box } from '@mui/system';
 import { motion } from 'framer-motion';
 import { background, contact, contactContainer, contactEmail, smallLogo, SocialMedia } from './sx';
-import logo from 'images/logo.png';
+import logo from '~/images/logo.png';
 import { containerVariants } from '~/sx';
 
 const Contact = () => {

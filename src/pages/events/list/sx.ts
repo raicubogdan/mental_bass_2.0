@@ -1,5 +1,5 @@
 import { SxProps } from '@mui/material';
-import backgroundImg from 'images/ram-skull-no-background.png';
+import backgroundImg from '~/images/ram-skull-no-background.png';
 
 export const eventsContainer: SxProps = {
   mt: { lg: '6rem', sm: '5rem' },

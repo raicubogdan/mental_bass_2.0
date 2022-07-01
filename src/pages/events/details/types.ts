@@ -2,7 +2,8 @@ interface Event {
   id: string;
   title: string;
   coordinates: GeolocationCoordinates;
-  date: string;
+  dateFrom: string;
+  dateTo: string;
   details: string;
 }
 

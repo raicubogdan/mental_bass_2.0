@@ -8,18 +8,18 @@ import TopNavbar from './TopNavBar';
 const Navbar = () => {
   const [sideNavbarPosition, setSideNavbarPosition] = useState('-100%');
 
-  const handleClick = () => {
-    (prevSideNavbarPosition: string) => {
-      setSideNavbarPosition(prevSideNavbarPosition === '-100%' ? '0%' : '-100%');
-    };
-  };
+  const handleClick = () => (
+      setSideNavbarPosition(
+        prevSideNavbarPosition => prevSideNavbarPosition === '-100%' ? '0%' : '-100%'
+      )
+  )
 
   return (
     <>
       <TopNavbar />
-      <Box sx={navHamburger}>
-        <Hamburger onToggle={handleClick} />
-      </Box>
+      <div onClick={handleClick} className='w-full justify-end lg:hidden flex text-white'>
+        <Hamburger />
+      </div>
       <SideNavbar sideNavbarPosition={sideNavbarPosition} />
     </>
   );

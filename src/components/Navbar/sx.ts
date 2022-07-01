@@ -1,7 +1,6 @@
 import { SxProps } from '@mui/material';
 
 export const topNavBar: SxProps = {
-  zIndex: '1',
   width: '100%',
   height: '30px',
   position: 'absolute',
@@ -12,11 +11,8 @@ export const topNavBar: SxProps = {
 };
 
 export const navHamburger: SxProps = {
-  zIndex: 1,
-  position: 'fixed',
   display: { lg: 'none', md: 'block' },
-  right: '5%',
-  top: '2%',
+  color: 'white'
 };
 
 export const navLink: SxProps = {
@@ -28,10 +24,9 @@ export const navLink: SxProps = {
 };
 
 export const sideNavBar: SxProps = {
-  zIndex: '1',
   display: { lg: 'none', md: 'block' },
   position: 'absolute',
   width: '100%',
-  bottom: '0',
+  top: '0',
   background: 'black',
 };

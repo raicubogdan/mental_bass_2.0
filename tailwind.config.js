@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./app/**/*.{ts,tsx,jsx,js}'],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -88,9 +88,12 @@ module.exports = {
         xxs: '320px',
         l: '1180px',
       },
-
       spacing: {
         18: '1.125rem',
+      },
+      fontFamily: {
+        LEDLIGHT: ["LEDLIGHT"],
+        cynatar: ["cynatar"],
       },
     },
     fontSize: {

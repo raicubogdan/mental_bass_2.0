@@ -3,7 +3,7 @@ import { Turn as TurnHamburger } from 'hamburger-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import { navHamburger, navLink, sideNavBar } from './sx';
+import { navHamburger, navLink } from './sx';
 import { links } from './constants';
 export const Hamburger = ({ handleClick }: any) => {
   return (
@@ -15,7 +15,7 @@ export const Hamburger = ({ handleClick }: any) => {
 
 export const SideNavbar = ({ sideNavbarPosition }: any) => {
   return (
-    <Box sx={sideNavBar} component={motion.div} animate={{ x: sideNavbarPosition }} transition={{ duration: 0.3 }}>
+    <motion.div className='z-1 lg:hidden block absolute w-full bottom-0 bg-black' animate={{ x: sideNavbarPosition }} transition={{ duration: 0.3 }}>
       <Grid container>
         {links.map(link => {
           return (
@@ -27,6 +27,6 @@ export const SideNavbar = ({ sideNavbarPosition }: any) => {
           );
         })}
       </Grid>
-    </Box>
+    </motion.div>
   );
 };

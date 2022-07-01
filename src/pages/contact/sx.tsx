@@ -1,7 +1,7 @@
 import { Facebook, Instagram, YouTube } from '@mui/icons-material';
 import { SxProps } from '@mui/material';
 import { Box } from '@mui/system';
-import backgroundImg from 'images/circle.png';
+import backgroundImg from '~/images/circle.png';
 
 export const socialMedia = [
   { id: '4', link: 'https://www.facebook.com/MBSoundSystem', Icon: Facebook },

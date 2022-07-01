@@ -1,12 +1,7 @@
 import { SxProps } from '@mui/material';
 
 export const eventDetailsContainer: SxProps = {
-  mt: { lg: '10rem', sm: '6rem', xs: '8rem' },
-  width: '100%',
-  display: 'flex',
-  flexDirection: { lg: 'row', md: 'row', sm: 'row', xs: 'column' },
-  justifyContent: 'space-around',
-  alignItems: 'center',
+
 };
 
 export const eventDetailsData: SxProps = {

@@ -1,5 +1,5 @@
 import { SxProps } from '@mui/material';
-import background from 'images/background3.png';
+import background from '~/images/background3.png';
 
 export const home: SxProps = {
   height: '100%',
@@ -21,7 +21,6 @@ export const video: SxProps = {
 };
 
 export const logoSx: SxProps = {
-  zIndex: '1',
   width: '29rem',
   height: '15rem',
   display: { lg: 'block', xs: 'none' },

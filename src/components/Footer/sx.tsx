@@ -8,7 +8,6 @@ export const socialMedia = [
 ];
 
 export const footerContainer: SxProps = {
-  position: 'absolute',
   width: '100%',
   top: '100%',
   display: 'flex',
