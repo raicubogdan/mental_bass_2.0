@@ -1,28 +1,37 @@
-import { Box } from '@mui/system'
-import { motion } from 'framer-motion'
-import { containerVariants } from 'sx'
-import { home, logoSx, video } from './sx'
+import { motion } from 'framer-motion';
+import { containerVariants } from '~/sx';
+import homeCover from '~/images/metti-cover.png';
+import logo from '~/images/logo.png';
+import { useEffect, useState } from 'react';
+import getEvent from '../events/utils';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const [event, setEvent] = useState({} as any);
+
+  useEffect(() => {
+    getEvent({attribute: 'homeEvent', setEvent, toEqual: true})
+  }, []);
+
   return (
-    <Box sx={home}
-      component={motion.div}
+    <motion.div
+      className="w-full h-full flex justify-between"
       variants={containerVariants}
-      initial='hidden'
-      animate='visible'
-      exit='hidden'>
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+    >
+      <div className='flex flex-col items-center lg:justify-center justify-start md:ml-20 md:mb-40 md:mt-0 mt-10 '>
+        <img className='w-[700px]' src={logo} alt="logo" />
+        <div className='font-cynatar text-white text-5xl'>Mental Bass</div>
+      </div>
+      {event.id &&
+        <Link to={`/events/${event.id}`} style={{ textDecoration: 'none' }}>
+          <img className="w-full h-full lg:block hidden" src={homeCover} alt='home-cover'/>
+        </Link>
+      }
+    </motion.div>
+  );
+};
 
-      {/* <Box sx={logoSx} component={'img'} src={logo}/> */}
-
-      <Box component={'video'} sx={video} autoPlay muted>
-        <source
-          src={'https://firebasestorage.googleapis.com/v0/b/mental-bass-2-0.appspot.com/o/video_background2.mp4?alt=media&token=177bd1fb-0799-4a2e-a926-715452989360'}
-          type="video/mp4"
-        />
-      </Box>
-    </Box>
-    
-  )
-}
-
-export default Home
+export default Home;
