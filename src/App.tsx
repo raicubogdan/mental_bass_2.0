@@ -1,9 +1,7 @@
-import { Box } from '@mui/material';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Home from '~/pages/home';
 import Events from '~/pages/events/list';
 import Contact from '~/pages/contact';
-import { app } from './sx';
 import Navbar from './components/Navbar';
 import EventDetails from './pages/events/details';
 import AnimatedRoutes from './components/Animation';
@@ -11,8 +9,8 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className='w-full h-full relative'>
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className={`relative h-full flex flex-col justify-end`}>
         <Navbar />
         <AnimatedRoutes exitBeforeEnter={true} initial={false}>
           <Route path="/" element={<Home />} />
@@ -21,8 +19,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </AnimatedRoutes>
         <Footer />
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

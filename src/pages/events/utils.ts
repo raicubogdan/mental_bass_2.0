@@ -1,20 +1,34 @@
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '~/firebaseDb/config';
+import Event from './details/types';
 import { GetEventArgs } from './types';
 
-const getEvent = async({attribute, setEvent, toEqual}: GetEventArgs) => {
+const getFiltereCondition = (filteredAttr: string, event: Event) => {
+  switch(filteredAttr) {
+    case 'homeEvent':
+     return event.homeEvent;
+    case 'show':
+      return event.show
+    default:
+      return event.id
+  }
+}
+
+const getEvents = async ({filteredAttr, toEqual}: GetEventArgs): Promise<Event[]> => {
   const ref = collection(db, 'events');
-  
-  getDocs(ref).then(snapshot => {
-    const results: any = [];
+  const results: Event[] = []
+
+  return getDocs(ref).then(snapshot => {
     snapshot.docs.forEach(doc => {
-      results.push({ id: doc.id, ...doc.data() });
+      results.push({ id: doc.id, ...doc.data() } as Event);
     });
-    const filteredResults = results.filter((event: any) => {
-      return event[attribute] === toEqual;
+
+    const filteredResults = results.filter((event: Event) => {
+      return getFiltereCondition(filteredAttr, event) === toEqual
     });
-    setEvent(filteredResults[0]);
+
+    return filteredResults
   });
 }
 
-export default getEvent
+export default getEvents

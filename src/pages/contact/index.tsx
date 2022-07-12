@@ -1,26 +1,22 @@
-import { Box } from '@mui/system';
 import { motion } from 'framer-motion';
-import { background, contact, contactContainer, contactEmail, smallLogo, SocialMedia } from './sx';
 import logo from '~/images/logo.png';
 import { containerVariants } from '~/sx';
+import { SocialMedia } from './SocialMedia';
 
 const Contact = () => {
   return (
-    <Box
-      sx={contact}
-      component={motion.div}
+    <motion.div
+      className={`h-full w-full flex items-center justify-center lg:h-[1080px] pb-20`}
       variants={containerVariants}
       initial="hidden"
       animate="visible"
       exit="hidden">
-      <Box sx={contactContainer}>
-        <Box sx={smallLogo} component={'img'} src={logo} />
-        <SocialMedia />
-        <Box sx={contactEmail}>mental-bass@gmail.com</Box>
-      </Box>
-
-      <Box sx={background} />
-    </Box>
+        <div className='flex flex-col items-center gap-6'>
+          <img className='max-h-[35vh]' src={logo} alt='logo'/>
+          <SocialMedia />
+          <div className='text-white font-orbitron lg:text-5xl md:text-4xl sm:text-3xl text-xl mt-6'>mental-bass@gmail.com</div>
+        </div>
+    </motion.div>
   );
 };
 

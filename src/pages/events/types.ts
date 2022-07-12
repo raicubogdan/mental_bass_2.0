@@ -1,7 +1,6 @@
 import React from 'react';
 
 export interface GetEventArgs {
-  attribute: string;
-  setEvent: React.Dispatch<React.SetStateAction<Event>>
+  filteredAttr: string;
   toEqual: string | boolean | undefined
 }

@@ -4,7 +4,7 @@ import { links } from './constants';
 
 const TopNavbar = () => {
   return (
-    <motion.div className="text-white font-cynatar no-underline w-full lg:flex hidden lg:text-4xl justify-around">
+    <motion.div className="text-white font-cynatar no-underline w-full h-14 lg:flex hidden lg:text-4xl justify-around">
       {links.map(link => {
         return (
           <Link key={link.id} to={link.to} style={{textDecoration: 'none'}}>
@@ -19,22 +19,3 @@ const TopNavbar = () => {
 };
 
 export default TopNavbar;
-
-// TopNavbarSx
-// {
-//   zIndex: '1',
-//   width: '100%',
-//   height: '30px',
-//   position: 'absolute',
-//   display: { lg: 'flex', xs: 'none' },
-//   flexDirection: 'row',
-//   justifyContent: 'space-around',
-//   background: 'rgba(0, 0, 0, 0)',
-// };
-
-// NavLink
-// textAlign: 'center',
-//   padding: { xl: '3vh', xs: '4vh' },
-//   color: 'white',
-//   fontFamily: 'cynatar',
-//   fontSize: { l: '3.0rem', sm: '2.0rem', xs: '2rem' },

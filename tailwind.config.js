@@ -84,9 +84,9 @@ module.exports = {
         10: '10px',
       },
       screens: {
+        '2xl': '1280px',
         xs: '420px',
         xxs: '320px',
-        l: '1180px',
       },
       spacing: {
         18: '1.125rem',
@@ -94,6 +94,7 @@ module.exports = {
       fontFamily: {
         LEDLIGHT: ["LEDLIGHT"],
         cynatar: ["cynatar"],
+        orbitron: ["orbitron"],
       },
     },
     fontSize: {

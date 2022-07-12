@@ -17,7 +17,7 @@
     "@types/react-dom": "^17.0.9",
     "eslint-config-prettier": "^8.5.0",
     "firebase": "^9.6.8",
-    "firebase-tools": "^10.6.0",
+    "firebase-tools": "^11.2.0",
     "framer-motion": "^6.2.7",
     "gh-pages": "^3.2.3",
     "hamburger-react": "^2.4.1",
@@ -30,11 +30,10 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "react-scripts build",
+    "build": "craco build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "yarn build && firebase deploy",
     "format:write": "prettier --write ."
   },
   "eslintConfig": {
