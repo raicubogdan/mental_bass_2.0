@@ -10,6 +10,7 @@ import Event from '../events/details/types';
 
 const Home = () => {
   const [events, setEvents] = useState<Event[]>([]);
+
   // const event = events[0]
   const event = {id: 1}
   // useEffect(() => {
@@ -37,7 +38,7 @@ const Home = () => {
         </Link>
       </>
     }
-      </motion.div>
+    </motion.div>
   );
 };
 

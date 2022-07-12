@@ -53,19 +53,19 @@ const EventDetails = () => {
             {/* <div>{getDateFromTimestamp(event.dateFrom)}</div> */}
             {/* <div>{getDateFromTimestamp(event.dateTo)}</div> */}
             <div>
-              {/* <p>COMING SOON</p> */}
+              <p>COMING SOON</p>
               {/* <p>46.817045°</p>
               <p>22.942660°</p> */}
-              <p>{event.coordinates.latitude}°</p>
-              <p>{event.coordinates.longitude}°</p>
-              <div className='w-full flex justify-around mt-10 px-20'>
+              {/* <p>{event.coordinates.latitude}°</p>
+              <p>{event.coordinates.longitude}°</p> */}
+              {/* <div className='w-full flex justify-around mt-10 px-20'>
                 <button onClick={() => handleClick()}>
                   <ContentCopyIcon sx={{ fontSize: '4rem' }}/>
                 </button>
                 <a href="https://www.google.com/maps/place/46%C2%B049'01.4%22N+22%C2%B056'33.6%22E/@46.817045,22.94266,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x9c92e321f360eddd!8m2!3d46.817045!4d22.94266" target='_blank'>
                   <LocationOnIcon sx={{ fontSize: '4rem' }}/>
                 </a>
-              </div>
+              </div> */}
             </div>
             <div>{event.details}</div>
           </div>
